@@ -70,20 +70,22 @@ Crie uma função com as seguintes características:
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
 function TesteFinal (x, y, z) {
-  if (y === undefined && z === undefined) {
+  if ( x !== undefined && y === undefined && z === undefined) {
   return x;
-  } else if (z === undefined) {
+  } else if (x !== undefined && y !== undefined && z === undefined) {
   return x + y;
-  } else if (x !== undefined && z !== undefined && y !== undefined)
+  } else if (x !== undefined && y !== undefined && z !== undefined) {
   return (x + y) / z;
-  } else if (x === undefined && y === undefined && y === undefined)
+  } else if (x === undefined && y === undefined && y === undefined) {
   return false;
   } else {
-  return 'null';
+  return null;
   }
- } 
-
+ }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+TesteFinal(); // false
+TesteFinal(1); // 1
+TesteFinal(1, 2); // 3
+TesteFinal(1, 2, 3); // 1
 ```
