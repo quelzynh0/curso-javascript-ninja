@@ -17,7 +17,7 @@ As propriedades e tipos de valores para cada propriedade desse objeto devem ser:
 - `caminhouQuantosMetros` - Number - recebe "zero" por padrão
 */
 var pessoa = { nome: 'Ezequiel', sobrenome: 'Marinho', sexo: 'masculino', idade: 23,
-altura: 1.80, peso: 80, andando: false, caminhouQuantosMetros: false };
+altura: 1.80, peso: 80, andando: false, caminhouQuantosMetros: 0 };
 
 /*
 Adicione um método ao objeto `pessoa` chamado `fazerAniversario`. O método deve
@@ -121,24 +121,24 @@ pessoa.andar(1);
 A pessoa ainda está andando? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.andando   // true
+pessoa.andando;   // true
 
 /*
 Se a pessoa ainda está andando, faça-a parar.
 */
-pessoa.para();
+pessoa.para();  
 
 /*
 E agora: a pessoa ainda está andando? (Use uma instrução para responder e
 comentários inline ao lado da instrução para mostrar a resposta retornada)
 */
-pessoa.andando   // false
+pessoa.andando;   // false
 
 /*
 Quantos metros a pessoa andou? (Use uma instrução para responder e comentários
 inline ao lado da instrução para mostrar a resposta retornada)
 */
-pessoa.quantosMetrosAndou();   // 16
+pessoa.caminhouQuantosMetros;   // 16
 
 /*
 Agora vamos deixar a brincadeira um pouco mais divertida! :D
@@ -163,9 +163,9 @@ var prefixoIdade = 'anos';
 var prefixoMetros = 'metros';
 if ( pessoa.sexo == 'feminino' ) {
 var prefixoSexo = 'a';
-} else { }  if ( pessoa.idade == 1 ) {
+} if ( pessoa.idade == 1 ) {
 var prefixoIdade = 'ano';
-} else { }  if ( pessoa.caminhouQuantosMetros == 1 ) {
+} if ( pessoa.caminhouQuantosMetros == 1 ) {
 var prefixoMetros = 'metro';
 } return 'Olá, eu sou '+prefixoSexo+', ' +pessoa.nome+ ' ' +pessoa.sobrenome+ ', tenho ' +pessoa.idade+ ' '+prefixoIdade+', tenho '+pessoa.altura+' metros de altura, meu peso é '+pessoa.peso+' kg e, só hoje, eu já caminhei '+pessoa.caminhouQuantosMetros+' '+prefixoMetros+'.' ;
 };
